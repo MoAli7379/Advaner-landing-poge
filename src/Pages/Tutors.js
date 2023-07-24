@@ -51,7 +51,7 @@ const Tutors = () => {
 </div>
 
 <div>
-<CoursesCard/>
+
 </div>
 
 

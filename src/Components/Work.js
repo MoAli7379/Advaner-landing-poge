@@ -26,13 +26,15 @@ const Work = () => {
 
   return (
     <div className="flex flex-col items-center justify-center p-10 space-y-10 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-500">
-      <h1 className="text-4xl font-semibold text-blue-600"></h1>
+      <h1 className="text-4xl font-semibold text-blue-600">How It Works</h1>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         {workInfoData.map((data, index) => (
-          <div key={index} className="p-8 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 space-y-6">
-            <img src={data.image} alt="" className="mx-auto h-24 w-24 object-cover rounded-full"/>
-            <p className="text-lg font-medium text-gray-700">{data.text}</p>
-            <button className="flex items-center justify-center py-2 px-4 text-white bg-red-600 rounded-full hover:bg-red-500 transition-all duration-300">
+          <div key={index} className="flex flex-col justify-between p-8 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 space-y-6">
+            <div>
+              <img src={data.image} alt="" className="mx-auto h-24 w-24 object-cover rounded-full"/>
+              <p className="text-lg font-medium text-gray-700">{data.text}</p>
+            </div>
+            <button className="mt-6 self-center flex items-center justify-center py-2 px-4 text-white bg-[#DC4444] rounded-full transition-all duration-300">
               Learn More
               <svg className="h-5 w-5 ml-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 12a1 1 0 01-.707-.293l-3-3a1 1 0 011.414-1.414L10 9.586l2.293-2.293a1 1 0 011.414 1.414l-3 3A1 1 0 0110 12z" clipRule="evenodd" />
