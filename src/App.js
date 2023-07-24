@@ -10,6 +10,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PricesCard from './Components/PricesCard';
 import Work from './Components/Work';
 import MyAccordion from './Components/MyAccordian';
+import HomeCoursesCard from './Components/HomeCoursesCard';
+import HomeCoursesContainer from './Components/HomeCoursesContainer';
 
 function App() {
   return (
@@ -25,7 +27,11 @@ function App() {
                   <TutorSection />
                   <Work/>
                   <PricesCard/>
+                  <Testimonial/>
+                  <HomeCoursesContainer/>
                   <MyAccordion/>
+
+                  
 
 
                 </div>
