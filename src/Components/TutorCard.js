@@ -1,23 +1,22 @@
 import React, { useState } from "react";
 import { FiStar } from "react-icons/fi";
 import Modal from 'react-modal';
-import img from "../Assets/Naz.png"
-
+import YouTube from 'react-youtube';
 Modal.setAppElement('#root')
 
 const customModalStyles = {
   content: {
-    top: '53%',
+    top: '52%',
     left: '50%',
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    width: '30%', 
+    width: '100%', // Width is 100%
+    maxWidth: '400px', // Max width is 400px
     height: 'auto',
     display: 'flex',
     flexDirection: 'column',
-    marginRight: '-25%',
     alignItems: 'center',
     justifyContent: 'center',
     padding: '0',
@@ -33,19 +32,19 @@ const customModalStyles = {
   }
 };
 
-const TutorCard = ({ name, videoUrl, count, rating, avatarUrl, description }) => {
+const TutorCard = ({ name, videoUrl, count, rating, avatarUrl, description, captionUrl }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const thumbnailUrl = img;
+  const isYoutubeUrl = videoUrl.includes("youtube.com");
 
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
 
   return (
     <div className="bg-white p-2 shadow-md rounded-xl overflow-hidden flex flex-col">
-      <div className="relative overflow-hidden rounded-xl mb-2 cursor-pointer" onClick={openModal}>
+      <div className="relative overflow-hidden rounded-xl mb-2 cursor-pointer h-56" onClick={openModal}>
         <img
-          src={thumbnailUrl}
-          alt="Video thumbnail"
+          src={captionUrl}
+          alt="Caption thumbnail"
           className="w-full h-full object-cover"
         />
       </div>
@@ -57,14 +56,27 @@ const TutorCard = ({ name, videoUrl, count, rating, avatarUrl, description }) =>
         style={customModalStyles}
       >
         <div className="bg-white p-0 shadow-md rounded-xl overflow-hidden flex flex-col w-full h-full">
-          <div className="relative overflow-hidden rounded-xl mb-2">
-            <video
-              src={videoUrl}
-              controls
-              className="w-full h-full object-cover"
-              style={{ borderRadius: '15px' }}
-              autoPlay
-            />
+          <div className="relative overflow-hidden rounded-xl mb-2 h-56">
+            {isYoutubeUrl ? (
+              <YouTube 
+                videoId={new URL(videoUrl).searchParams.get('v')} 
+                opts={{ 
+                  height: '100%', 
+                  width: '100%', 
+                  playerVars: { autoplay: 1 }  // Add autoplay option here
+                }} 
+                className="w-full h-full object-cover" 
+                style={{ borderRadius: '15px' }}
+              />
+            ) : (
+              <video
+                src={videoUrl}
+                controls
+                className="w-full h-full object-cover"
+                style={{ borderRadius: '15px' }}
+                autoPlay
+              />
+            )}
           </div>
 
           <div className="px-4">
@@ -88,7 +100,16 @@ const TutorCard = ({ name, videoUrl, count, rating, avatarUrl, description }) =>
               <p>{description}</p>
             </div>
 
-            <button className="w-full my-4 bg-[#FF5542] text-white py-2 mt-4 rounded transform transition duration-500 ease-in-out hover:scale-105" onClick={closeModal}>Start Learning</button>
+            <button 
+  className="w-full my-4 bg-[#FF5542] text-white py-2 mt-4 rounded transform transition duration-500 ease-in-out hover:scale-105" 
+  onClick={() => {
+    window.open('https://advancerenglish.com/teachers', '_blank', 'noopener,noreferrer');
+    closeModal();
+  }}
+>
+  Start Learning
+</button>
+
           </div>
         </div>
       </Modal>

@@ -26,7 +26,9 @@ const Work = () => {
 
   return (
     <div className="flex flex-col items-center justify-center p-10 space-y-10 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-500">
-      <h1 className="text-4xl font-semibold text-blue-600">How It Works</h1>
+     <h1 className="text-3xl font-bold text-center text-gray-800 mb-12">
+        How It Works
+      </h1>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         {workInfoData.map((data, index) => (
           <div key={index} className="flex flex-col justify-between p-8 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-500 space-y-6">

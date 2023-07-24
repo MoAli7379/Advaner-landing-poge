@@ -38,29 +38,40 @@ const MyAccordion = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
   const questions = [
     { 
       title: 'Ders İşleyişi ve Rezervasyon Yapma', 
       content: [
-        { title: 'Öğretmenler sadece İngilizce konuşursa dersleri anlayacak mıyım?', content: 'Content goes here...' },
-        { title: 'Deneme dersi sonrası nasıl derslere başlayabilirim?', content: 'Content goes here...' },
+        { title: 'Öğretmenler sadece İngilizce konuşursa dersleri anlayacak mıyım?', content: 'Advancer sadece dil pratiği yapmıyorsunuz, aynı zamanda eğlenceli vakit geçiriyorsunuz . Bu format, sizin yabancı öğretmenlerle kolayca etkileşim kurmasını sağlar. Öğrenciler onlara özal hazırlanmış videoları izler ve slaytlara inceler ve öğretmenler öğrencilere bunların içinde ne olduğunu kelimelerle veya mimik ve jestlerle açıklamaya çalışır. Çeviri veya ek açıklamalar olmadan öğrenciler ders materyallerini anlamaya başlar. Birkaç dersten sonra öğrenciler formata alışırlar ve talimatları kolayca anlayabilir, öğretmenlerin söylediklerini tekrar edebilir, sorularını cevaplayabilirler.' },
+        { title: 'Deneme dersi sonrası nasıl derslere başlayabilirim?', content: 'Advancer 90 günlük programa başlamak için şu adımları izleyiniz;Menüden Ücretler butonuna tıklayın ve dileğiniz aylık paketi kredi kartı veya banka transferi ile satın alın Hesabınıza giriş yapın ve istediğiniz bir eğitmenden ders rezervasyonu yapın' },
       ]
     },
     { 
       title: 'Genel', 
       content: [
-        { title: 'Ders nasıl iptal edilir ve ertelenir?', content: 'Content goes here...' },
-        { title: 'Para iadesi var mı? Kaç gün içerisinde para iadesi yapılabiliyor?', content: 'Content goes here...' },
+        { title: 'Ders nasıl iptal edilir ve ertelenir?', content: 'Planlı dersinizi, 8 saat öncesine kadar herhangi bir hak kaybı yaşamadan iptal edebilirsiniz. Planlı dersinize 1 saat kalaya kadar, aynı öğretmenin 7 gün içerisinde farklı bir gün ve saatte uygunluğu varsa dersinizi taşıyabilirsiniz.' },
+        { title: 'Para iadesi var mı? Kaç gün içerisinde para iadesi yapılabiliyor?', 
+          content: [
+            <ul>
+    <li>1. 45 gün süresince para iade garantisi vardır.</li>
+    <li>2. Eğer derslerden ve öğretmenlerden memnun değilseniz, 45 gün içerisinde para iadesi tarafınıza yapılacaktır.</li>
+    <li>3. Karar vermek için bir buçuk ayınız bulunuyor!</li>
+    <li>4. Planlarınızda bir değişiklik olursa işlemediğiniz dersleriniz iade edilecektir</li>
+    <li>5. Ücret iade talebi için bizimle websitemiz chatbot kısmından veya sitenin en altında bulunan whatsapp numaramız ile iletişime geçebilirsiniz.</li>
+</ul>
+
+          ]
+        },
       ]
     },
   ];
+
 
   return (
     <ThemeProvider theme={theme}>
       <Paper elevation={3} sx={{ p: 3, mt: 2, mx: 'auto', width: '75%', bgcolor: 'background.paper', boxShadow: 0, borderRadius: 2 }} ref={searchRef}>
         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 2 }}>
-          {!showSearch && <Typography variant="h4">Sıkça Sorulan Sorular</Typography>}
+          {!showSearch && <Typography variant="h4" >Sıkça Sorulan Sorular</Typography>}
           <Box sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', width: '100%' }}>
             <Grow in={showSearch}>
               <TextField

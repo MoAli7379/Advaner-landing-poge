@@ -24,14 +24,7 @@ const Tutors = () => {
         </p>
         <div className="flex flex-wrap justify-center gap-y-8">
           <TeacherBody className="m-4" />
-          <TeacherBody className="m-4" />
-          <TeacherBody className="m-4" />
-          <TeacherBody className="m-4" />
-          <TeacherBody className="m-4" />
-          <TeacherBody className="m-4" />
-          <TeacherBody className="m-4" />
-          <TeacherBody className="m-4" />
-          <TeacherBody className="m-4" />
+          
         </div>
       </div>
       <div className="flex flex-col items-center justify-center my-10 mx-auto text-center font-sans max-w-screen-md">
