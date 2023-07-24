@@ -1,40 +1,33 @@
 import React from "react";
-import BannerImage from "../Assets/class.png";
+import BannerImage from "../Assets/home.svg";
 import Navbar from "./Navbar";
 import { FiArrowRight } from "react-icons/fi";
 
 const Home = () => {
   return (
-    <div className="font-sans min-h-screen text-gray-900 bg-white">
+    <div className="min-h-screen font-sans text-gray-900 bg-[#faf2ef]">
       <Navbar />
-      <div className="flex flex-col items-center justify-center h-full md:flex-row">
-        <div className="flex flex-col items-center w-full bg-white lg:flex-row">
-          <div className="mb-16 text-center lg:my-12 lg:px-16 lg:w-1/2">
-            <h1 className="mb-6 text-2xl font-semibold text-gray-700 lg:text-4xl">
-              Learn English by Speaking & Having Fun
-            </h1>
-            <p className="mb-8 text-lg text-gray-600">
-              Start speaking English right away with native English-speaking teachers! 
-              Learn English by watching movies and having fun in the Metaverse.
-            </p>
-            <div className="flex gap-4">
-            <button className="py-2 px-6 rounded-lg bg-[#FF5542] text-white font-semibold uppercase shadow-md hover:bg-blue-600">
-            <span className="flex items-center">
-              Trial Lesson <FiArrowRight />
-            </span>
-          </button>
-          <button className="py-2 px-6 rounded-lg bg-[#FF5542] text-white font-semibold uppercase shadow-md hover:bg-blue-600">
-            <span className="flex items-center">
-              Lesson Fees <FiArrowRight />
-            </span>
-          </button>
 
+      <div className="flex flex-col-reverse items-center justify-center pt-16 pb-32 md:flex-row">
+        <div className="w-full mx-6 md:w-1/2">
+          <h1 className="mb-6 text-3xl font-bold leading-tight text-center text-gray-700 md:text-left md:text-4xl lg:text-5xl">
+            Learn English by Speaking & Having Fun
+          </h1>
+          <p className="mb-8 text-lg text-center text-gray-600 md:text-left">
+            Start speaking English right away with native English-speaking teachers! 
+            Learn English by watching movies and having fun in the Metaverse.
+          </p>
+          <div className="flex justify-center md:justify-start">
+            <button className="px-8 py-3 text-lg font-semibold tracking-wider text-white uppercase transition duration-200 transform bg-[#FF5542] rounded-lg shadow-md hover:shadow-lg hover:scale-105">
+              <span className="flex items-center space-x-2">
+                Trial Lesson <FiArrowRight />
+              </span>
+            </button>
+          </div>
+        </div>
 
-            </div>
-          </div>
-          <div className="flex justify-center w-full lg:w-1/2">
-            <img src={BannerImage} alt="Banner" className="w-full h-auto rounded-md  " />
-          </div>
+        <div className="w-full mt-12 md:mt-0 md:w-1/2 md:pl-10">
+          <img src={BannerImage} alt="Banner" className="object-cover w-full h-full rounded-md " />
         </div>
       </div>
     </div>

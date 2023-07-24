@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar";
 import TeacherHome from"../Components/TeacherHome";
 import TeacherBody from "../Components/TeacherBody";
 import { FiArrowRight } from "react-icons/fi";
-
+import CoursesCard from "../Components/CoursesCard";
 import "../App.css";
 
 const Tutors = () => {
@@ -47,6 +47,11 @@ const Tutors = () => {
             <FiArrowRight />
         </span>
     </button>
+
+</div>
+
+<div>
+<CoursesCard/>
 </div>
 
 
