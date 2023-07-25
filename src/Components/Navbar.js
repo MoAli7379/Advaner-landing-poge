@@ -65,7 +65,7 @@ const Navbar = () => {
 
       <div className="hidden md:flex space-x-3 items-center justify-center">
         <a
-          href="/courses"
+          href="/tutor"
           className="text-gray-500 hover:text-#FF5542 transition-colors"
         >
           Tutors
