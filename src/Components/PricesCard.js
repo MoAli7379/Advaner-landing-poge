@@ -27,7 +27,7 @@ const PricesCard = () => {
             <ListItem text="24/7 unlimited live classes" Icon={FaInfinity} />
           </ul>
         </div>
-        <button className="mt-6 bg-gradient-to-r from-[#DC4444] to-[#DC6666] text-white py-2 px-4 w-full rounded-md shadow-md focus:outline-none hover:from-[#DC6666] hover:to-[#DC4444] transition-colors duration-300">Select Plan</button>
+        <button className="mt-6 bg-gradient-to-r from-[#1f0606] to-[#2a0e0e] text-white py-2 px-4 w-full rounded-md shadow-md focus:outline-none hover:from-[#DC6666] hover:to-[#DC4444] transition-colors duration-300">Select Plan</button>
       </div>
     );
 };
@@ -55,13 +55,13 @@ const PlanDisplay = () => {
       <Tab.List className="flex justify-center p-1 space-x-1 mb-4">
         <Tab className={({ selected }) => (
           `py-2 px-4 uppercase tracking-wider font-semibold text-sm rounded-md transition-colors 
-          ${selected ? 'border-b-2 border-[#DC4444] text-[#DC4444]' : 'text-gray-500 border-b-2 border-transparent'}`
+          ${selected ? 'border-b-2 border-[#230d0d] text-[#dbd4d4]' : 'text-gray-500 border-b-2 border-transparent'}`
         )}>
           Standard Plan
         </Tab>
         <Tab className={({ selected }) => (
           `py-2 px-4 uppercase tracking-wider font-semibold text-sm rounded-md transition-colors 
-          ${selected ? 'border-b-2 border-[#DC4444] text-[#DC4444]' : 'text-gray-500 border-b-2 border-transparent'}`
+          ${selected ? 'border-b-2 border-[#0e0202] text-[#6d3f3f]' : 'text-gray-500 border-b-2 border-transparent'}`
         )}>
           Premium Plan
         </Tab>

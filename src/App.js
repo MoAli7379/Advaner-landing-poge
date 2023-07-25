@@ -4,6 +4,7 @@ import './index.css';
 import Home from './Components/Home';
 import TutorSection from './Components/TutorSection';
 import Tutors from './Pages/Tutors';
+import Courses from './Pages/Courses';
 import Testimonial from './Components/Testimonial';
 import Contact from './Components/Contact';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -39,8 +40,9 @@ function App() {
             }
           />
           <Route path="/tutor" element={<Tutors />} />
-          <Route path="/testimonial" element={<Testimonial />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/courses" element={<Courses />} />
+          {/* <Route path="/testimonial" element={<Testimonial />} />
+          <Route path="/contact" element={<Contact />} /> */}
         </Routes>
       </Router>
     </div>

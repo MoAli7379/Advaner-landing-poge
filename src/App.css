@@ -40,7 +40,7 @@ body {
 }
 
 body {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 nav {
@@ -497,4 +497,21 @@ nav {
   .about-background-image-container {
     display: none;
   }
+}.slider-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth; 
+}
+
+.slider-container > div {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-container {
+  scrollbar-width: none;
 }

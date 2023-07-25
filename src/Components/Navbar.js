@@ -65,13 +65,13 @@ const Navbar = () => {
 
       <div className="hidden md:flex space-x-3 items-center justify-center">
         <a
-          href="/tutor"
+          href="/courses"
           className="text-gray-500 hover:text-#FF5542 transition-colors"
         >
           Tutors
         </a>
         <a
-          href="/work"
+          href="/courses"
           className="text-gray-500 hover:text-#FF5542 transition-colors"
         >
           Courses
